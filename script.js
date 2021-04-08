@@ -117,7 +117,8 @@ $(function (){
             job_title: $li.find('input.job_title').val(),
 
         };
-
+    
+        //Methode PUT for edit one  employee
     $.ajax({
         type: 'PUT',
         url:'https://6057e432c3f49200173ad08d.mockapi.io/api/v1/employees/' + $li.attr('data-id'),
