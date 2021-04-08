@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+<body>
+
+    <h5>Add a new employee</h5>
+    <p>Name:<input type="text" id="name"></p>
+    <p>Last_name:<input type="text" id="last_name"></p>
+    <p>Email:<input type="text" id="email"></p>
+    <p>Job:<input type="text" id="job_title"></p>
+    <button id="add-employee">Confirm add</button>
+
+    </br>
+    </br>
+    </br>
+
+    <ul id="employees"></ul>
+
+    <template id="employee-template">
+        <li data-id="{{id}}">
+            <p><strong>Id:  </strong>{{id}}</p>
+            <p>
+                <strong>Name:  </strong>
+                <span class="noEdit name">{{name}}</span>
+                <input class="edit name"/>
+            </p>
+            <p>
+                <strong>Last Name:  </strong>
+                <span class="noEdit last_name">{{last_name}}</span>
+                <input class="edit last_name"/>
+            </p>
+            <p>
+                <strong>Email:  </strong>
+                <span class="noEdit email">{{email}}</span>
+                <input class="edit email"/>
+            </p>
+            <p>
+                <strong>Job:  </strong>
+                <span class="noEdit job_title">{{job_title}}</span>
+                <input class="edit job_title"/>
+            </p>
+            <button data-id='{{id}}' class='remove'>Delete</button>
+            <button class="editEmployee noEdit">Edit</button>
+            <button class="saveEdit edit">Save</button>
+            <button class="cancelEdit edit">Cancel</button>
+
+        </li>
+    </template>
+
+
+
+<script src="script.js" ></script>
+<script src="node_modules/mustache/mustache.js"></script>
+
+</body>
+
+</html>
