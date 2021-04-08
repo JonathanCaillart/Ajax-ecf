@@ -11,4 +11,4 @@
  
  Si tout va bien tout marche
  
- # Méthode : GET,POST,DELETE
+ # Méthode : GET,POST,PUT,DELETE
